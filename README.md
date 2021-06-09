@@ -16,7 +16,7 @@ Currently powered by Axios! This decision was made largely due to the deprecatio
 
 ## How to use
 
-In your project import the module like so: 
+In your project import the module like so:
 ```
 const MLBStatsAPI = require('mlb-stats-api');
 const mlbStats = new MLBStatsAPI();
@@ -59,7 +59,7 @@ const response = await mlbStats.getGame(params: { ...... }, { pathParams: { ....
  * /conferences - mlbStats.getConferences()
  * /divisions - mlbStats.getDivisions()
  * /draft - mlbStats.getDraft()
- * /game 
+ * /game
      * /game/{gamePk}/feed/live - mlbStats.getGame()
      * /game/{gamePk}/feed/live/diffPatch -  mlbStats.getGameDiffPatch()
      * /game/{gamePk}/feed/live/timestamps - mlbStats.getGameTimestamps()
@@ -90,8 +90,8 @@ const response = await mlbStats.getGame(params: { ...... }, { pathParams: { ....
     * /jobs/umpires/games/{umpireId} = mlbStats.getJobsUmpiresGames()
     * /jobs/datacasters - mlbStats.getJobsDatacasters()
     * /jobs/officialScorers - mlbStats.getJobsOfficialScorers()
- * /schedule - mlbStats.getSchedule() 
-    * /schedule/games/tied - mlbstats.getScheduleTied() 
+ * /schedule - mlbStats.getSchedule()
+    * /schedule/games/tied - mlbstats.getScheduleTied()
     * /schedule/postseason - mlbStats.getSchedulePostseason()
     * /schedule/postseason/series - mlbStats.getSchedulePostseasonSeries()
     * /schedule/postseason/tuneIn - mlbStats.getSchedulePostseasonTuneIn()
@@ -113,4 +113,5 @@ const response = await mlbStats.getGame(params: { ...... }, { pathParams: { ....
     * /teams/{teamId}/personnel - mlbStats.getTeamPersonnel()
     * /teams/{teamId}/leaders - mlbStats.getTeamLeaders()
     * /teams/{teamId}/roster - mlbStats.getTeamRoster()
- * /venues - mlbStats.getVenue()
+ * /venues - mlbStats.getVenues()
+    * /venues/{venueId} - mlbStats.getVenue()

@@ -136,7 +136,12 @@ describe('MLBStatsAPI', () => {
     });
 
     it('Should Get Venues with a 200 Status', async () => {
-        const response = await mlbStats.getVenue();
+        const response = await mlbStats.getVenues();
+        should(response.status).be.exactly(200);
+    });
+
+    it('Should Get Single Venue with a 200 Status', async () => {
+        const response = await mlbStats.getVenue({ pathParams: { venueId: 3313 } });
         should(response.status).be.exactly(200);
     });
 
