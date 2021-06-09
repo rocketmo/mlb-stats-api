@@ -3,7 +3,7 @@
 class Venue {
     getVenue(args = {}) {
         const { params } = args;
-        return this.request.get(`${this.apiHost}venue`, { params: params });
+        return this.request.get(`${this.apiHost}venues`, { params: params });
     }
 }
 

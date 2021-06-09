@@ -42,7 +42,7 @@ describe('MLBStatsAPI', () => {
         } catch (err) {
             should(err.response.status).be.exactly(405);
         }
-        
+
     });
 
     it('Should Get Single Game Diff Patch Data with a 200 Status', async () => {
@@ -124,7 +124,7 @@ describe('MLBStatsAPI', () => {
         let response;
         try {
             response = await mlbStats.getHomeRunDerby({ pathParams: { gamePk: 13456} });
-            
+
         } catch (err) {
             should(err.response.status).be.exactly(404);
         }
@@ -132,6 +132,11 @@ describe('MLBStatsAPI', () => {
 
     it('Should Get League with a 200 Status', async () => {
         const response = await mlbStats.getLeague({ params: { sportid: 1, leagueIds: 103 } });
+        should(response.status).be.exactly(200);
+    });
+
+    it('Should Get Venues with a 200 Status', async () => {
+        const response = await mlbStats.getVenue();
         should(response.status).be.exactly(200);
     });
 
