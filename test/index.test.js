@@ -145,4 +145,19 @@ describe('MLBStatsAPI', () => {
         should(response.status).be.exactly(200);
     });
 
+    it('Should Get Situation Codes with a 200 Status', async () => {
+        const response = await mlbStats.getMeta({ pathParams: { type: 'situationCodes' } });
+        should(response.status).be.exactly(200);
+    });
+
+    it('Should Get Situation Codes with a 200 Status', async () => {
+        const response = await mlbStats.getMeta({ pathParams: { type: 'situationCodes' } });
+        should(response.status).be.exactly(200);
+    });
+
+    it('Should Get Umpires with a 200 Status', async () => {
+        const response = await mlbStats.getJobsUmpires();
+        should(response.status).be.exactly(200);
+    });
+
 })
